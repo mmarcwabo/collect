@@ -277,7 +277,6 @@ dependencies {
     }
 
     implementation Dependencies.androidx_startup
-    implementation Dependencies.androidx_legacy_support
     implementation Dependencies.androidx_core_ktx
     implementation Dependencies.androidx_browser
     implementation Dependencies.androidx_appcompat
@@ -352,11 +351,6 @@ dependencies {
     // Needed for injection into Robolectric tests
     testAnnotationProcessor Dependencies.dagger_compiler
 
-    // Dagger Android:
-    implementation Dependencies.dagger_android
-    implementation Dependencies.dagger_android_support
-    annotationProcessor Dependencies.dagger_android_processor
-
     implementation Dependencies.armen101_audio_recorder_view
 
     implementation(Dependencies.mp4parser_muxer) {
@@ -370,7 +364,6 @@ dependencies {
     // Testing-only dependencies
     testImplementation Dependencies.junit
     testImplementation Dependencies.mockito_core
-    testImplementation Dependencies.mockito_inline
     testImplementation Dependencies.mockito_kotlin
 
     testImplementation project(':androidtest')
@@ -391,17 +384,14 @@ dependencies {
     testImplementation Dependencies.androidx_test_espresso_core
     testImplementation Dependencies.androidx_test_espresso_intents
     testImplementation Dependencies.androidx_test_core_ktx
-    testImplementation Dependencies.kotlinx_coroutines_test
 
     androidTestImplementation project(':androidtest')
 
     // Used to generate documentation screenshots.
     androidTestImplementation Dependencies.fastlane_screengrab
-    androidTestImplementation Dependencies.mockito_android
     androidTestImplementation Dependencies.androidx_test_ext_junit
     androidTestImplementation Dependencies.androidx_test_espresso_core
     androidTestImplementation Dependencies.androidx_arch_core_testing
-    androidTestImplementation Dependencies.androidx_test_espresso_contrib
     androidTestImplementation(Dependencies.androidx_test_espresso_intents) {
         exclude group: 'com.android.support', module: 'support-annotations'
     }

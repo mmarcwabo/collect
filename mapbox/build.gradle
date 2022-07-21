@@ -56,6 +56,5 @@ dependencies {
     testImplementation project(':testshared')
 
     testImplementation Dependencies.junit
-    testImplementation Dependencies.mockito_inline
     testImplementation Dependencies.hamcrest
 }
