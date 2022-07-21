@@ -11,11 +11,12 @@ import org.odk.collect.android.javarosawrapper.FormController;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.reactivex.annotations.Nullable;
 import timber.log.Timber;
 
 import static org.odk.collect.android.formentry.audit.AuditEvent.AuditEventType.LOCATION_PROVIDERS_DISABLED;
 import static org.odk.collect.android.formentry.audit.AuditEvent.AuditEventType.LOCATION_PROVIDERS_ENABLED;
+
+import androidx.annotation.Nullable;
 
 /**
  * Handle logging of auditEvents (which contain time and might contain location coordinates),
